@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="MyCalculator\DoMinus.cs" />
     <Compile Include="MyCalculator\DoPlus.cs" />
+    <Compile Include="MyCalculator\DoSquare.cs" />
     <Compile Include="MyCalculator\ICalculate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

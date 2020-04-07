@@ -77,6 +77,7 @@
             this.delete.TabIndex = 1;
             this.delete.Text = "CE";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // deleteAll
             // 
@@ -88,6 +89,7 @@
             this.deleteAll.TabIndex = 3;
             this.deleteAll.Text = "C";
             this.deleteAll.UseVisualStyleBackColor = false;
+            this.deleteAll.Click += new System.EventHandler(this.Form1_Load);
             // 
             // divide
             // 
@@ -110,6 +112,7 @@
             this.squared.TabIndex = 17;
             this.squared.Text = " x²";
             this.squared.UseVisualStyleBackColor = false;
+            this.squared.Click += new System.EventHandler(this.squared_Click);
             // 
             // multiply
             // 
@@ -276,6 +279,7 @@
             this.changeSymbol.TabIndex = 34;
             this.changeSymbol.Text = "+/-";
             this.changeSymbol.UseVisualStyleBackColor = false;
+            this.changeSymbol.Click += new System.EventHandler(this.changeSymbol_Click);
             // 
             // button0
             // 
@@ -299,6 +303,7 @@
             this.buttonDouble.TabIndex = 36;
             this.buttonDouble.Text = ",";
             this.buttonDouble.UseVisualStyleBackColor = false;
+            this.buttonDouble.Click += new System.EventHandler(this.buttonDouble_Click);
             // 
             // Form1
             // 
