@@ -50,20 +50,24 @@
             this.changeSymbol = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.buttonDouble = new System.Windows.Forms.Button();
+            this.numberBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // numberBox
             // 
             this.numberBox.AcceptsReturn = true;
             this.numberBox.BackColor = System.Drawing.SystemColors.Window;
-            this.numberBox.Cursor = System.Windows.Forms.Cursors.No;
-            this.numberBox.Font = new System.Drawing.Font("Maiandra GD", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numberBox.Cursor = System.Windows.Forms.Cursors.NoMoveHoriz;
+            this.numberBox.Font = new System.Drawing.Font("Maiandra GD", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numberBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numberBox.Location = new System.Drawing.Point(13, 12);
+            this.numberBox.Location = new System.Drawing.Point(156, 24);
             this.numberBox.Name = "numberBox";
             this.numberBox.ReadOnly = true;
             this.numberBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.numberBox.Size = new System.Drawing.Size(465, 65);
+            this.numberBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.numberBox.Size = new System.Drawing.Size(313, 45);
             this.numberBox.TabIndex = 0;
             this.numberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -101,6 +105,7 @@
             this.divide.TabIndex = 4;
             this.divide.Text = "÷";
             this.divide.UseVisualStyleBackColor = false;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
             // squared
             // 
@@ -124,6 +129,7 @@
             this.multiply.TabIndex = 21;
             this.multiply.Text = "×";
             this.multiply.UseVisualStyleBackColor = false;
+            this.multiply.Click += new System.EventHandler(this.multiply_Click);
             // 
             // minus
             // 
@@ -305,13 +311,52 @@
             this.buttonDouble.UseVisualStyleBackColor = false;
             this.buttonDouble.Click += new System.EventHandler(this.buttonDouble_Click);
             // 
+            // numberBox2
+            // 
+            this.numberBox2.AcceptsReturn = true;
+            this.numberBox2.AcceptsTab = true;
+            this.numberBox2.AllowDrop = true;
+            this.numberBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.numberBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numberBox2.Cursor = System.Windows.Forms.Cursors.NoMoveHoriz;
+            this.numberBox2.Font = new System.Drawing.Font("Maiandra GD", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberBox2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.numberBox2.Location = new System.Drawing.Point(21, 49);
+            this.numberBox2.Name = "numberBox2";
+            this.numberBox2.ReadOnly = true;
+            this.numberBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.numberBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.numberBox2.Size = new System.Drawing.Size(129, 20);
+            this.numberBox2.TabIndex = 37;
+            this.numberBox2.WordWrap = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Maiandra GD", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(464, 65);
+            this.textBox1.TabIndex = 38;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(489, 584);
+            this.ClientSize = new System.Drawing.Size(492, 591);
+            this.Controls.Add(this.numberBox2);
+            this.Controls.Add(this.numberBox);
             this.Controls.Add(this.buttonDouble);
             this.Controls.Add(this.button0);
             this.Controls.Add(this.changeSymbol);
@@ -332,7 +377,7 @@
             this.Controls.Add(this.divide);
             this.Controls.Add(this.deleteAll);
             this.Controls.Add(this.delete);
-            this.Controls.Add(this.numberBox);
+            this.Controls.Add(this.textBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -368,6 +413,8 @@
         private System.Windows.Forms.Button changeSymbol;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button buttonDouble;
+        private System.Windows.Forms.TextBox numberBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

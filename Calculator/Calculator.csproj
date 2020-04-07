@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyCalculator\DoDivide.cs" />
     <Compile Include="MyCalculator\DoMinus.cs" />
+    <Compile Include="MyCalculator\DoMultiply.cs" />
     <Compile Include="MyCalculator\DoPlus.cs" />
     <Compile Include="MyCalculator\DoSquare.cs" />
     <Compile Include="MyCalculator\ICalculate.cs" />
