@@ -207,9 +207,11 @@ namespace Calculator
         {
             if (numberBox.Text != "")
             {
-                tmp1 = Convert.ToDouble(numberBox.Text);
+                ICalculate b = Calculate;
+                double a = Convert.ToDouble(numberBox.Text);
                 Calculate = new DoSquare();
-                numberBox.Text = Calculate.DoMath(tmp1, tmp2) + "";
+                numberBox.Text = Calculate.DoMath(a, tmp2) + "";
+                Calculate = b;
             }
         }
 
