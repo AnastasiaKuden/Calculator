@@ -99,16 +99,19 @@ namespace Calculator
 
         private void buttonDouble_Click(object sender, EventArgs e)  //делаем число дробным
         {
-            if (numberBox.Text.IndexOf(",") == -1)
+            if (numberBox.Text != "")
             {
-                if (numberBox.Text == null)
+                if (numberBox.Text.IndexOf(",") == -1)
                 {
-                    numberBox.Text = "0,";
+                    if (numberBox.Text == null)
+                    {
+                        numberBox.Text = "0,";
+                    }
+                    else
+                    {
+                        numberBox.Text = numberBox.Text + ",";
+                    }
                 }
-                else
-                {
-                    numberBox.Text = numberBox.Text + ",";
-                }                               
             }            
         }
 
