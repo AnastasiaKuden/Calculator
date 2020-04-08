@@ -153,7 +153,14 @@ namespace Calculator
                     numberBox.Text = "";
                     Calculate = new DoMinus();
                 }                                  
-            }            
+            }  
+            else if (numberBox.Text == "" && Calculate != null)
+            {
+                Calculate = new DoMinus();
+                int x = numberBox2.Text.Length - 1;
+                numberBox2.Text = numberBox2.Text.Remove(x, 1);
+                numberBox2.Text = numberBox2.Text + "-";
+            }
         }
         
         private void plus_Click(object sender, EventArgs e)  //плюс
@@ -175,7 +182,7 @@ namespace Calculator
                     else
                     {
                         numberBox.Text = "";
-                        Calculate = new DoMinus();
+                        Calculate = new DoPlus();
                         numberBox2.AppendText($" {a} +");
                     }
                 }
@@ -186,6 +193,13 @@ namespace Calculator
                     numberBox.Text = "";
                     Calculate = new DoPlus();
                 }
+            }
+            else if (numberBox.Text == "" && Calculate != null)
+            {
+                Calculate = new DoPlus();
+                int x = numberBox2.Text.Length - 1;
+                numberBox2.Text = numberBox2.Text.Remove(x, 1);
+                numberBox2.Text = numberBox2.Text + "+";
             }
         }
 
@@ -218,7 +232,7 @@ namespace Calculator
                     else
                     {
                         numberBox.Text = "";
-                        Calculate = new DoMinus();
+                        Calculate = new DoDivide();
                         numberBox2.AppendText($" {a} /");
                     }
                 }
@@ -229,6 +243,13 @@ namespace Calculator
                     numberBox.Text = "";
                     Calculate = new DoDivide();
                 }
+            }
+            else if (numberBox.Text == "" && Calculate != null)
+            {
+                Calculate = new DoDivide();
+                int x = numberBox2.Text.Length - 1;
+                numberBox2.Text = numberBox2.Text.Remove(x, 1);
+                numberBox2.Text = numberBox2.Text + "/";
             }
         }
 
@@ -251,7 +272,7 @@ namespace Calculator
                     else
                     {
                         numberBox.Text = "";
-                        Calculate = new DoMinus();
+                        Calculate = new DoMultiply();
                         numberBox2.AppendText($" {a} *");
                     }
                 }
@@ -262,6 +283,13 @@ namespace Calculator
                     numberBox.Text = "";
                     Calculate = new DoMultiply();
                 }
+            }
+            else if (numberBox.Text == "" && Calculate != null)
+            {
+                Calculate = new DoMultiply();
+                int x = numberBox2.Text.Length - 1;
+                numberBox2.Text = numberBox2.Text.Remove(x, 1);
+                numberBox2.Text = numberBox2.Text + "*";
             }
         }
 
