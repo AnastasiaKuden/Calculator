@@ -99,7 +99,7 @@ namespace Calculator
 
         private void buttonDouble_Click(object sender, EventArgs e)  //делаем число дробным
         {
-            if (numberBox.Text != "")
+            if (numberBox.Text != "" && numberBox.Text != "Game over!")
             {
                 if (numberBox.Text.IndexOf(",") == -1)
                 {
@@ -117,7 +117,7 @@ namespace Calculator
 
         private void changeSymbol_Click(object sender, EventArgs e)  //меняем знак
         {            
-            if (numberBox.Text != "0")
+            if (numberBox.Text != "0" && numberBox.Text != "" && numberBox.Text != "Game over!")
             {
                 numberBox.Text = (Convert.ToDouble(numberBox.Text) * (-1)) + "";
             }            
@@ -205,13 +205,25 @@ namespace Calculator
 
         private void squared_Click(object sender, EventArgs e) //возводим в квадрат
         {
-            if (numberBox.Text != "")
+            if (numberBox.Text != "" && numberBox.Text != "Game over!")
             {
                 ICalculate b = Calculate;
                 double a = Convert.ToDouble(numberBox.Text);
                 Calculate = new DoSquare();
-                numberBox.Text = Calculate.DoMath(a, tmp2) + "";
-                Calculate = b;
+                string c = Calculate.DoMath(a, tmp2) + "";
+                if (c != "∞")
+                {
+                    numberBox.Text = c;
+                    Calculate = b;
+                }
+                else
+                {
+                    numberBox.Text = "Game over!";
+                    numberBox2.Text = "";
+                    tmp1 = 0;
+                    tmp2 = 0;
+                    Calculate = null;
+                }
             }
         }
 
